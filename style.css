@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======== ROOT ======== */
+:root {
+    /* background-color */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* font-color */
+    --very-light-gray: hsl(0, 0%, 95%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    background: var(--very-light-gray);
+}
+
+/* ======== MAIN ======== */
+
+/* 16.12vh */
+.section {
+    margin: 21.5vh 18vw 0;
+}
+
+.container {
+    border-radius: 0.5rem;    
+}
+
+.display {
+    display:flex;
+}
+
+.car {
+    width: 33.33rem;
+    height: 31rem;
+    padding: 2.9rem 0 2.9rem 2.9rem;
+}
+
+.car .image {
+    margin-bottom: 2rem;
+}
+
+.car .title {
+    font: 700 1.5rem 'Big Shoulders Display', sans-serif;
+    color: var(--very-light-gray);
+    margin-bottom: 2rem;
+}
+
+.car .text {
+    font: 400 0.9rem 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    opacity: 0.7;
+    line-height:1.5rem;
+    margin-bottom: 5rem;
+}
+
+.car button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background: var(--very-light-gray);
+    font: 400 0.9rem 'Lexend Deca', sans-serif;
+    cursor: pointer;
+}
+
+/* Sedan */
+.car#sedan {
+    background: var(--bright-orange);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.car#sedan .text {
+    width: 12rem;
+}
+
+.car#sedan button {
+    color: var(--bright-orange);
+}
+
+.car#sedan button:active {
+    padding: 0.9rem 1.9rem;
+    background: var(--bright-orange);
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+/* SUV's */
+.car#suvs {
+    background: var(--dark-cyan);
+}
+
+.car#suvs .text {
+    width: 12.7rem;
+}
+
+.car#suvs button {
+    color: var(--dark-cyan);
+}
+
+.car#suvs button:active {
+    padding: 0.9rem 1.9rem;
+    background: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+/* Luxury */
+
+.car#luxury {
+    background: var(--very-dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.car#luxury .text {
+    width: 13rem;
+}
+
+.car#luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.car#luxury button:active {
+    padding: 0.9rem 1.9rem;
+    background: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+/* ======== FOOTER ======== */
+
+.attribution { 
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 5.5rem;
+}
+
+.attribution a {
+    color: var(--very-dark-cyan);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1439px) {
+    /* ======== MAIN ======== */
+    .section {
+        margin: 5.2rem 1.5rem 5.2rem;
+    }
+
+    .display {
+        display: grid;
+    }
+    
+    .car {
+        width: 100%;
+        height: 26.8rem;
+    }
+
+    .car .image {
+        margin-bottom: 1.8rem;
+    }
+
+    .car .title,
+    .car .text {
+        margin-bottom: 1.6rem;
+    }
+
+    .car button {
+        padding: 0.92rem 1.9rem;
+    }
+
+    .car#sedan button:active,
+    .car#suvs button:active,
+    .car#luxury button:active{
+        padding: 0.8rem 1.78rem;
+    }
+
+    /* Sedan */
+    .car#sedan {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .car#sedan .text {
+        width: 14rem;
+    }
+
+    /* Suv's */
+    .car#suvs .text {
+        width: 14rem;
+    }
+
+    /* Luxury */
+    .car#luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .car#luxury .text {
+        width: 13.5rem;
+    }
+
+    /* ======== FOOTER ======== */
+    .attribution {
+        margin-top: -5rem;
+        margin-bottom: 4.2rem;
+    }
+}
